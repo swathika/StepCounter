@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.swathika.StepCounter" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.swathika.StepCounter.HomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.swathika.StepCounter.SignUPActivity"
+            android:label="@string/title_activity_activity3" >
+        </activity>
+        <activity
+            android:name="com.example.swathika.StepCounter.StepcounterActivity"
+            android:label="@string/title_activity_stepcounter" >
+        </activity>
+        <uses-feature
+            android:name="@string/step_detector" android:required="false"/>
+
+        <uses-feature
+            android:name="@string/step_counter" android:required="false"/>
+
+    </application>
+
+</manifest>

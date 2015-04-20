@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.swathika.StepCounter.ItemFragment"
+    android:id="@+id/fragment_timecounter">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="118dp"
+        android:id="@+id/timeCounter"
+        android:layout_gravity="left|top" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button_start"
+        android:layout_gravity="bottom|top" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button_pause"
+        android:layout_gravity="right|top" />
+
+    <TextView
+        android:layout_width="156dp"
+        android:layout_height="49dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/timeCounter1"
+        android:layout_gravity="center_horizontal|top" />
+
+
+</FrameLayout>
