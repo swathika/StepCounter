@@ -32,7 +32,10 @@ public class Timecounter extends Fragment {
 
         private Handler mHandler = null;
 
-        private static int count = 0;
+        private static int second = 0;
+        private static int minute=0;
+        private static int hour=0;
+
         private boolean isPause = false;
         private boolean isStop = true;
 
@@ -113,7 +116,7 @@ public class Timecounter extends Fragment {
 
 
         private void updateTextView() {
-            mTextView.setText(String.valueOf(count));
+            mTextView.setText((String.valueOf(hour)+":"+String.valueOf(minute)+":"+String.valueOf(second)));
         }
 
         private void startTimer() {
@@ -125,7 +128,7 @@ public class Timecounter extends Fragment {
                 mTimerTask = new TimerTask() {
                     @Override
                     public void run() {
-                        Log.i(TAG, "count: " + String.valueOf(count));
+                        Log.i(TAG, "count: " + String.valueOf(hour)+":"+String.valueOf(minute)+":"+String.valueOf(second));
                         sendMessage(UPDATE_TEXTVIEW);
 
                         do {
@@ -136,7 +139,17 @@ public class Timecounter extends Fragment {
                             }
                         } while (isPause);
 
-                        count++;
+                        second++;
+                        if(minute>0)
+                        {
+                            hour=hour+(minute/60);
+                        }
+                        if(second>0)
+                        {
+                            minute=second+(second/60);
+                        }
+                         second=second%60;
+
                     }
                 };
             }
@@ -159,7 +172,7 @@ public class Timecounter extends Fragment {
                 mTimerTask = null;
             }
 
-            count = 0;
+            second = 0;
 
         }
 
